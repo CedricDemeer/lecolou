@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "build:dev": "postcss -w src/tailwind.css -o public/style.css",
+    "build:full": "npx tailwindcss build src/tailwind.css -o public/style.css --minify"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "postcss-cli": "^10.1.0",
+    "tailwindcss": "^3.3.2"
+  }
+}
