@@ -17,7 +17,6 @@ $helloasso = new helloasso();
   </div>      
   <div class=" container mx-auto border-double border-4 border-white rounded-md my-4">
     <h1>coucou</h1>
-    <?= $helloasso->affichetoken() ?>
   </div> 
     
     
