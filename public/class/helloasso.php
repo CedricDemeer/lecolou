@@ -85,7 +85,6 @@ class helloasso {
         }
     }
     public function inittoken($params){
-
         //données pour obtenir un token
         $postData = http_build_query($params);
         //récupération du token:
@@ -109,6 +108,24 @@ class helloasso {
         
     }
 
+    public function getEvents(){
+        
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, "https://api.helloasso.com/v5/organizations/" . CLIENTNAME . "/forms?pageIndex=1&pageSize=20" );
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true );
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array("Authorization: Bearer " . $this->access_token, "Content-Type: application/json"));
+        $reponse = curl_exec($ch);
+        if (curl_errno($ch)) {
+            echo  'Erreur :' . curl_error($ch);
+        }
+        curl_close($ch);
+        
+        //echo"<pre> résultat "; print_r(json_decode($reponse, true));echo"<pre>";echo'<br/>';
+        //$tab_rep = json_decode($reponse, true);
+
+        
+        return json_decode($reponse, true);
+    }
    
     
 }

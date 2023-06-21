@@ -17,6 +17,12 @@ $helloasso = new helloasso();
   </div>      
   <div class=" container mx-auto border-double border-4 border-white rounded-md my-4">
     <h1>coucou</h1>
+    <?php foreach ($helloasso->getEvents()["data"] as $event) : ?>
+      <?php if($event['state'] === 'Public') : ?>
+        <img src="<?= $event['banner']['publicUrl'] ?>" alt="">
+        <h2><?= $event['title'] ?></h2>
+      <?php endif; ?>
+    <?php endforeach; ?>
   </div> 
     
     
