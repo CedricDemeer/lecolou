@@ -3,7 +3,7 @@
 class madate {
 
     private const SEMAINE = array(" Dimanche "," Lundi "," Mardi "," Mercredi "," Jeudi ",
-                " Vendredi "," Samedi ");
+                " Vendredi "," Samedi "," Dimanche ");
     private const MOIS =array(1=>" Janvier "," Février "," Mars "," Avril "," Mai "," Juin ",
     " Juillet "," Août "," Septembre "," Octobre "," Novembre "," Décembre ");
 
